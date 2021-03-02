@@ -1,0 +1,30 @@
+SongList {
+    vertical-align: center;
+    text-align: center;
+    margin: 20px;
+}
+
+Artist {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    background-color: bisque;
+    margin: auto;
+    padding: 1%;
+}
+
+Artist Song {
+    font-size: 16px;
+    text-decoration: bold;
+    padding: 2% 15%;
+    display: block;
+    text-align: left;
+}
+
+Year {
+    text-align: center;
+}
+
+Genre {
+    text-align: right;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="style.css" ?>
+<SongList>
+    <Artist>
+        <Name>The Weeknd</Name>
+        <Song> I Feel It Coming
+            <Year>2016</Year>
+            <Genre>RnB/Pop</Genre>
+        </Song>
+        <Song> Starboy
+            <Year>2016</Year>
+            <Genre>RnB/Pop</Genre>
+        </Song>
+        <Song> Often
+            <Year>2015</Year>
+            <Genre>RnB/Pop</Genre>
+        </Song>
+    </Artist>
+    <Artist>
+        <Name>Nujabes</Name>
+        <Song> Counting Stars
+            <Year>2007</Year>
+            <Genre>Lofi</Genre>
+        </Song>
+        <Song> Color of Autumn
+            <Year>2011</Year>
+            <Genre>Lofi</Genre>
+        </Song>
+        <Song> Luv (sic)
+            <Year>2015</Year>
+            <Genre>Lofi</Genre>
+        </Song>
+    </Artist>
+    <Artist>
+        <Name>Future</Name>
+        <Song> News or Something
+            <Year>2016</Year>
+            <Genre>Hip-Hop</Genre>
+        </Song>
+        <Song> Too Comfortable
+            <Year>2020</Year>
+            <Genre>Hip-Hop</Genre>
+        </Song>
+        <Song> Life is Good (feat. Drake)
+            <Year>2020</Year>
+            <Genre>Hip-Hop</Genre>
+        </Song>
+        <Song> Mask Off
+            <Year>2017</Year>
+            <Genre>Hip-Hop</Genre>
+        </Song>
+    </Artist>
+
+
+
+</SongList>
