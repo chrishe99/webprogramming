@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Joe's Hotdog Stand</title>
+    </head>
+    <body>
+        <script language = "javascript">
+            hotdogs = parseInt(prompt("How many hotdogs would'ya like?"));
+            fries = parseInt(prompt("Would you like fries with that? If so, how many orders?"))
+            sodas = parseInt(prompt("Would you like a drink? If so, how many sodas?"))
+            subtotal = (hotdogs*3.25) + (fries * 2) + (sodas * 1.5)
+            if (subtotal >= 20)
+            {
+                with_disc = subtotal * 0.9
+                disc = 0 - subtotal * 0.1
+            }
+            else
+            {
+                with_disc = subtotal
+                disc = 0
+            }
+            tax = subtotal * 0.0625
+            final = with_disc * 1.0625
+            quantities = [hotdogs, fries, sodas, subtotal, disc, tax, final]
+            items = ["Hot Dogs", "Fries", "Sodas", "Subtotal", "Discount", "Tax", "Total"]
+            for (i = 0; i < quantities.length; i++)
+            {
+                temp = quantities[i].toFixed(2)
+                document.write(items[i] + ":  " + temp + "<br>")
+            }
+        </script>
+    </body>
+</html>
