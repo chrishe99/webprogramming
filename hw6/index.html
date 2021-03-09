@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Amicable Numbers</title>
+        <h1>Amicable Numbers</h1>
+    </head>
+
+    <body>
+        <h2>Enter two numbers to determine if they are amicable (if their factors add up to each other)</h2>
+        <div>
+            <form>
+                Number 1: <input type = "text" id = "first" placeholder="First number"> <br \>
+                Number 2: <input type = "text" id = "second" placeholder="First number"> <br \>
+                <input type = "button" value = "Submit" onclick = 'isAmicable()'>
+            </form>
+        </div>
+
+        <script language ="javascript">
+            function getFactors(num) {
+                let factors = [];
+                for (i = 1; i < num; i++) {
+                    if (num % i == 0) {
+                        factors.push(i)
+                    }
+                }
+                return factors;
+            }
+            function isAmicable() {
+                let num1 = document.getElementById('first').value;
+                let num2 = document.getElementById('second').value;
+
+                let first_factors = getFactors(num1);
+                let second_factors = getFactors(num2);
+
+                let sum1 = 0
+                for (i = 0; i < first_factors.length; i++) {
+                    sum1 += first_factors[i];
+                }
+                let sum2 = 0
+                for (i = 0; i < second_factors.length; i++) {
+                    sum2 += second_factors[i];
+                }
+
+                if (sum1 == num2 && sum2 == num1) {
+                    alert("Your numbers are indeed amicable. Good job sir/madam")
+                }
+                else {
+                    alert("Unfortunately, your numbers are not amicable. Please try again another time.")
+                }
+            }
+        </script>
+    </body>
+</html>
