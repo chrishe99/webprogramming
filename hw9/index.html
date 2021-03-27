@@ -2,9 +2,7 @@
 <html>
   <head>
     <h1>SongList Using JSON</h1>
-    <script src=
-    "https://code.jquery.com/jquery-3.5.1.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <div id = "form">
@@ -22,9 +20,9 @@
         </div>
     </body>
         <script language = "javascript">
-            $.get("SongList.json", function(data) {
+            $.get("https://chrishe99.github.io/webprogramming/hw9/SongList.json", function(data) {
                 let rawString = JSON.stringify(data);
-                document.getElementById("rawString").innerHTML = rawString + <br/>;
+                document.getElementById("rawString").innerHTML = rawString + "<br/>";
 
                 temp = "";
                 data.forEach(function(song) {
