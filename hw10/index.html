@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>    
+        <title>API Fun</title>
+        <h1>API Fun</h1>
+        <meta charset="utf-8"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <style>
+        </style>
+    </head>
+<style>
+    #characterData {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+        background-color: #ffcb05;
+    }
+</style>
+
+    <body onload = "getAPI()">
+        <div>
+            <h2>Questions</h2>
+            <p>I selected the Pokemon API which returns a list of the Pokemon in the first generations games along with their corresponding Pokedex number.</p> <br/>
+            <p>https://pokeapi.co/</p> <br/>
+            <p>I used the selector "limit" which allowed me to limit the entries to the first 151 Pokemon</p> <br/>
+            <p>This API would be helpful for those who are looking to test their memory on their childhood. It could also be useful to just have all the names of the Pokemon in one place. 
+                If The API contained images of Pokemon it would also be helpful to include them. 
+            </p>
+        </div>
+        <div id = "characterData"></div>
+    </body>
+    <script language = "javascript">
+        function getAPI () {
+            request = new XMLHttpRequest();
+            console.log("1 - request object created");
+            request.open("GET", "https://pokeapi.co/api/v2/pokemon?limit=151", true);
+            console.log("2 - opened request file");
+            
+            request.onreadystatechange = function () {
+                console.log("3 - readystatechange event fired.")
+                if (request.readyState == 4 && request.status == 200) {
+                    result = request.responseText;
+                    characters = JSON.parse(result);
+                    
+                    document.getElementById("characterData") == null;
+                    for (let i = 0; i < characters.results.length; i++) {
+                        //if (characters[i].name != "") {
+                            document.getElementById("characterData").innerHTML += "Pokemon #" + (i+1) + ": " + characters.results[i].name + "<br/>";
+                        //}
+                    }
+
+                }
+            }
+            request.send();
+            console.log("4 - Request sent");
+        }
+    </script>
+</html>
