@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>SongList Using JSON</h1>
+    <script src=
+    "https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+    </head>
+    <body>
+        <div id = "form">
+            <select id = "genre">
+                <option value = "all" name = "all">Display All</option>
+                <option value = "pop/rnb" name = "pop/rnb">Pop/RnB</option>
+                <option value = "lofi" name = 'lofi'>LoFi</option>
+                <option vlaue = 'hiphop' name = "hiphop">Hip-Hop</option>
+            </select>
+            <input type = "button" value = "confirm" id = 'button' onclick = "updatePage(genre.value)">
+        </div>
+        <div id = "SongList">
+            <p id = "rawString"></p>
+            <p id = "userFriendly"></p>
+        </div>
+    </body>
+        <script language = "javascript">
+            $.get("SongList.json", function(data) {
+                let rawString = JSON.stringify(data);
+                document.getElementById("rawString").innerHTML = rawString + <br/>;
+
+                temp = "";
+                data.forEach(function(song) {
+                  temp += song.name;
+                  temp += "<br/>"
+                  temp += song.artist;
+                  temp += "<br/>"
+                  temp += song.year;
+                  temp += "<br/>";
+                  temp += song.genre;
+                  temp += "<br/><br/><br/>"
+                })
+                document.getElementById("userFriendly").innerHTML = temp + <br/>;
+            })
+
+            function updatePage(genre) {
+                let temp = "";
+                if (genre == "all") {
+                    data.forEach(function(song){
+                        temp += song.name;
+                        temp += "<br/>"
+                        temp += song.artist;
+                        temp += "<br/>"
+                        temp += song.year;
+                        temp += "<br/>";
+                        temp += song.genre;
+                        temp += "<br/><br/><br/>"
+                    })
+                }
+                else {
+                    data.forEach(function(song) {
+                        temp += song.name;
+                        temp += "<br/>"
+                        temp += song.artist;
+                        temp += "<br/>"
+                        temp += song.year;
+                        temp += "<br/>";
+                        temp += song.genre;
+                        temp += "<br/><br/><br/>"
+                    })
+                }
+                document.getElementById('userFriendly').innerHTML = temp;
+            }
+        </script>
+</html>
