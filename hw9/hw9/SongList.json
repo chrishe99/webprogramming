@@ -1,0 +1,62 @@
+[
+    {
+        "name" : "I Feel It Coming",
+        "artist" : "The Weeknd",
+        "genre" : ["RnB/Pop"],
+        "year" : "2016"
+    },
+    {
+        "name" : "Often",
+        "artist" :"The Weeknd",
+        "genre" : ["RnB/Pop"],
+        "year" : "2015"
+    },
+    {
+        "name" : "Starboy",
+        "artist" : "The Weeknd",
+        "genre" : ["RnB/Pop"],
+        "year" : "2016"
+    },
+    {
+        "name" : "Counting Stars",
+        "artist" : "Nujabes",
+        "genre" : ["Lofi"],
+        "year" : "2007"
+    },
+    {
+        "name": "Color of Autumn",
+        "artist" : "J Balvin",
+        "genre" : ["Lofi"],
+        "year" : "2011"
+    },
+    {
+        "name" : "Luv (sic)",
+        "artist" : "Nujabes",
+        "genre" : ["Lofi"],
+        "year" : "2015"       
+    },
+    {
+        "name" : "News or Something",
+        "artist" : "Future",
+        "genre" : ["Hip-Hop"],
+        "year" : "2016"
+    },
+    {
+        "name" : "Too Comfortable",
+        "artist" :"Future",
+        "genre" : ["Hip-Hop"],
+        "year" : "2020"
+    },
+    {
+        "name" : "Life is Good (feat. Drake)",
+        "artist": "Future",
+        "genre" :["Hip-Hop"],
+        "year" : "2020"
+    },
+    {
+        "name" : "Mask Off",
+        "artist" : "Future",
+        "genre" : ["Hip-Hop"],
+        "year" : "2017"
+    }
+]

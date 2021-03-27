@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>SongList Using JSON</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id = "form">
+            <select id = "genre">
+                <option value = "all" name = "all">Display All</option>
+                <option value = "RnB/Pop" name = "pop/rnb">Pop/RnB</option>
+                <option value = "Lofi" name = 'lofi'>Lofi</option>
+                <option value = 'Hip-Hop' name = "hiphop">Hip-Hop</option>
+            </select>
+            <input type = "button" value = "confirm" id = 'button' onclick = "updatePage(genre.value)">
+        </div>
+        <div id = "SongList">
+            <p id = "raw"></p>
+            <p id = "userFriendly"></p>
+        </div>
+        <script language = "javascript">
+            function updatePage(genre) {
+                $.get("https://chrishe99.github.io/webprogramming/hw9/SongList.json", 
+                function(data) {
+                let temp = "";
+                if (genre == "all") {
+                    data.forEach(function(song){
+                        temp += song.name;
+                        temp += "<br/>"
+                        temp += song.artist;
+                        temp += "<br/>"
+                        temp += song.year;
+                        temp += "<br/>";
+                        temp += song.genre;
+                        temp += "<br/><br/><br/>"
+                    })
+                }
+                else {
+                    data.forEach(function(song) {
+                        if (song.genre == genre) {
+                        temp += song.name;
+                        temp += "<br/>"
+                        temp += song.artist;
+                        temp += "<br/>"
+                        temp += song.year;
+                        temp += "<br/>";
+                        temp += song.genre;
+                        temp += "<br/><br/><br/>"
+                        }
+                    })
+                }
+                document.getElementById('userFriendly').innerHTML = temp;
+            })
+            }            
+            $.get("https://chrishe99.github.io/webprogramming/hw9/SongList.json", 
+            function (data) {
+                rawString = JSON.stringify(data);
+                document.getElementById("raw").innerHTML = rawString + "<br/>";
+
+                temp = "";
+                data.forEach(function(song) {
+                  temp += song.name;
+                  temp += "<br/>";
+                  temp += song.artist;
+                  temp += "<br/>";
+                  temp += song.year;
+                  temp += "<br/>";
+                  temp += song.genre;
+                  temp += "<br/><br/><br/>";
+                })
+                document.getElementById("userFriendly").innerHTML = temp + "<br/>";
+            })
+
+
+        </script>
+</body>
+</html>
